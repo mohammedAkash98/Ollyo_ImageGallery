@@ -1,38 +1,215 @@
-.App {
-  text-align: center;
+section {
+    padding: 2rem 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+label {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px dotted black;
+    border-radius: 20px;
+    width: 10rem;
+    height: 10rem;
+    cursor: pointer;
+    font-size: large;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+label span {
+    font-weight: lighter;
+    font-size: small;
+    padding-top: 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input {
+    display: none;
 }
 
-.App-link {
-  color: #61dafb;
+img {
+    padding: 0;
+    margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    margin: 1rem 0.5rem;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.image button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: lightcoral;
+}
+
+.image button:hover {
+    background-color: red;
+}
+
+.image p {
+    padding: 0 0.5rem;
+    margin: 0;
+}
+
+.featured img {
+    height: 400px;
+}
+
+.upload-btn {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 20px;
+    width: 10rem;
+    height: 3rem;
+    color: white;
+    background-color: green;
+}
+
+label:hover,
+.upload-btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.error {
+    text-align: center;
+}
+
+.error span {
+    color: red;
+}
+
+.delete-selected-btn {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 20px;
+    width: 10rem;
+    height: 3rem;
+    color: white;
+    background-color: red;
+}
+
+.selected {
+    border: 2px solid blue;
+}
+
+input[type="checkbox"]:not(:checked)+label::before {
+    border: 20px solid green;
+    /* Change the border color for unchecked checkboxes */
+}
+
+
+/* Add this to your existing CSS file */
+
+
+/* Highlight selected images with a red border */
+
+.image.selected {
+    border: 2px solid red;
+}
+
+
+/* Style the "Delete Selected" button */
+
+.delete-selected-btn {
+    cursor: pointer;
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+}
+
+.delete-selected-btn:hover {
+    background-color: darkred;
+}
+
+
+/* CSS for Slideshow Button */
+
+.slideshow-btn {
+    display: block;
+    margin: 1rem auto;
+    border: none;
+    border-radius: 20px;
+    width: 10rem;
+    height: 3rem;
+    color: white;
+    background-color: #007bff;
+    /* Blue color */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slideshow-btn:hover {
+    background-color: #0056b3;
+    /* Darker blue color on hover */
+}
+
+
+/* CSS for Slideshow Container */
+
+.slideshow {
+    text-align: center;
+    padding: 1rem;
+}
+
+.slideshow-image {
+    max-width: 100%;
+    max-height: 60vh;
+    margin: 0 auto;
+    display: block;
+}
+
+
+/* CSS for Slideshow Navigation Buttons */
+
+.slideshow-prev-btn,
+.slideshow-next-btn {
+    display: inline-block;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s;
+}
+
+.slideshow-prev-btn:hover,
+.slideshow-next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Darker background on hover */
+}
+
+
+/* Checked checkbox */
+
+input[type="checkbox"]:checked+label::before {
+    background-color: #007bff;
+    /* Change the background color for checked checkboxes */
+    border: 20px solid #007bff;
+    /* Change the border color for checked checkboxes */
 }
